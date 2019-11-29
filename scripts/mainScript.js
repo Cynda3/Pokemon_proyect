@@ -1,18 +1,18 @@
-import { pokemon } from 'pokemon.js';
+      import { Pokemon } from '/scripts/pokemon.js';
+
+      $('#submit').click(function(){
+         let pokemon = {
+            name: $('#name').val(),
+            type: $('#type').val()
+         };
+         let {name, type} = pokemon;
+         console.log(name+" "+ type);
+         let newPokemon = new Pokemon(name, type);
+         newPokemon.weakness(pokemon.type);
+         newPokemon.resistances(pokemon.type);
+       });
 
 
-
-	$('#submit').click(function(){
-      let pokemon = {
-         name: $('#name').val(),
-         type: $('#type').val()
-      };
-      let {name, type} = pokemon;
-		console.log(name+" "+ type);
-		let newPokemon = new Pokemon(name, type);
-		newPokemon.weakness(pokemon.type);
-		newPokemon.resistances(pokemon.type);
-    });
 
 
 
